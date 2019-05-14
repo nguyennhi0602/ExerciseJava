@@ -1,0 +1,4 @@
+rootProject.name = 'exercise'
+include '.circleci'
+include '.circleci'
+
