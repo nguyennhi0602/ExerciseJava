@@ -12,5 +12,7 @@ public class Exercise5Test {
     public void test_listFibonaci(){
         assertEquals(new Exercise5().listFibonaci(1),"0");
         assertEquals(new Exercise5().listFibonaci(9),"1 1 2 3 5 8");
+        assertEquals(new Exercise5().listFibonaci(8),"1 1 2 3 5");
+        assertEquals(new Exercise5().listFibonaci(13),"1 1 2 3 5 8");
     }
 }
