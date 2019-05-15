@@ -2,14 +2,14 @@ public class Exercise3 {
     public boolean isPrimeNumber(int number){
         if(number < 2) {
             return false;
-        }else {
-            int root = (int)Math.sqrt(number);
-            for(int i=2; i<=root; i++) {
-                if(number % i == 0) {
+        }
+
+        int root = (int)Math.sqrt(number);
+           for(int i=2; i<=root; i++) {
+               if(number % i == 0) {
                     return false;
                 }
             }
-        }
         return true;
     }
     public String analysisPrimeNumber(int number){
@@ -19,8 +19,8 @@ public class Exercise3 {
         String result="";
         int primeNumber=2;
         int count=0;
-        while (number > 1) {
-            if (isPrimeNumber(primeNumber) && (number % primeNumber == 0)) {
+        for(int j=0;j<number;j++){
+            if ((number % primeNumber == 0) && (isPrimeNumber(primeNumber)) ) {
                 do {
                     number = number / primeNumber;
                     count++;
