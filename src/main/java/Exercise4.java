@@ -1,40 +1,24 @@
 public class Exercise4 {
-    public boolean isPrimeNumber(int number){
-        if(number < 2) {
-            return false;
-        }
-           int root = (int)Math.sqrt(number);
-           for(int i=2; i<=root; i++) {
-               if(number % i == 0) {
-                   return false;
-               }
-
-        }
-        return true;
-    }
     public String analysisPrimeNumber(int number){
-        if(isPrimeNumber(number)){
-            return String.valueOf(number);
-        }
         String result="";
-        int primeNumber=2;
-        for(int j=0;j<number;j++){
+        for(int temp=2;temp<number;temp++){
             int count=0;
-            if (number % primeNumber == 0) {
-                do {
-                    number = number / primeNumber;
-                    count++;
-                } while (number % primeNumber == 0);
+            while (number % temp==0){
+                count++;
+                number=number/temp;
+            }
+
+            if(count!=0){
+                result+=temp;
                 if(count>1){
-                    result += primeNumber + "^" +count + " * ";
-                }else{
-                    result += primeNumber+ " * ";
+                    result+="^"+count;
                 }
-            } else {
-                primeNumber++;
+                if(number>1){
+                    result+=" * ";
+                }
             }
         }
-        result=result.substring(0,result.length()-2).trim();
+
         return result;
     }
 }
