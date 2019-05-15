@@ -18,9 +18,9 @@ public class Exercise4 {
         }
         String result="";
         int primeNumber=2;
-        int count=0;
         for(int j=0;j<number;j++){
-            if ((number % primeNumber == 0) && isPrimeNumber(primeNumber)) {
+            int count=0;
+            if (number % primeNumber == 0) {
                 do {
                     number = number / primeNumber;
                     count++;
@@ -30,11 +30,8 @@ public class Exercise4 {
                 }else{
                     result += primeNumber+ " * ";
                 }
-
-
             } else {
                 primeNumber++;
-                count = 0;
             }
         }
         result=result.substring(0,result.length()-2).trim();
