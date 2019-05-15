@@ -18,20 +18,14 @@ public class Exercise3 {
         }
         String result="";
         int primeNumber=2;
-        int count=0;
         for(int j=0;j<number;j++){
-            if ((number % primeNumber == 0) && (isPrimeNumber(primeNumber)) ) {
+            if (number % primeNumber == 0 ) {
                 do {
                     number = number / primeNumber;
-                    count++;
-                } while (number % primeNumber == 0);
-                for (int i = 0; i < count; i++) {
                     result += primeNumber + "*";
-                }
-
+                } while (number % primeNumber == 0);
             } else {
                 primeNumber++;
-                count = 0;
             }
         }
         result=result.substring(0,result.length()-1);
