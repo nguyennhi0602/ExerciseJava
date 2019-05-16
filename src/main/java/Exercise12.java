@@ -8,9 +8,9 @@ public class Exercise12 {
     }
 
     public double calculateSum(int number) {
-        double result = 0;
-        for (int i = 0; i < number; i++) {
-            result += 1 / calculateFactorial(i);
+        double result = 1;
+        for (int i = 1; i <= number; i++) {
+            result += (double) 1 / calculateFactorial(i - 1) / i;
         }
         return result;
     }
