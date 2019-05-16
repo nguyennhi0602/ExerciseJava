@@ -1,24 +1,18 @@
 public class Exercise4 {
-    public String analysisPrimeNumber(int number){
-        String result="";
-        for(int temp=2;temp<number;temp++){
-            int count=0;
-            while (number % temp==0){
-                count++;
-                number=number/temp;
-            }
 
-            if(count!=0){
-                result+=temp;
-                if(count>1){
-                    result+="^"+count;
-                }
-                if(number>1){
-                    result+=" * ";
-                }
-            }
+    public String analysisPrimeNumber(int number) {
+        if(number<2){
+            return String.valueOf(number);
         }
-
-        return result;
+        String result="";
+        int temp=2;
+        while(number>=temp){
+            while (number % temp == 0 ) {
+                number = number / temp;
+                result += temp + "*";
+            }
+            temp++;
+        }
+        return result.substring(0,result.length()-1);
     }
 }
