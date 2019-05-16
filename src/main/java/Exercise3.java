@@ -1,7 +1,7 @@
-public class Exercise4 {
+public class Exercise3 {
 
-    public String analysisPrimeNumber(int number) {
-        if(number<2){
+    public String analysisPrimeNumber(int number){
+        if(number<=2){
             return String.valueOf(number);
         }
         String result="";
@@ -13,6 +13,7 @@ public class Exercise4 {
             }
             temp++;
         }
-        return result.substring(0,result.length()-1);
+        result=result.substring(0,result.length()-1);
+        return result;
     }
 }
