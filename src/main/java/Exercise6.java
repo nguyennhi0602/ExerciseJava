@@ -9,17 +9,16 @@ public class Exercise6 {
             }
             return "Phuong trinh co nghiem: " + (-c / b);
         }
-        double x1, x2, delta;
-        delta = b * b - 4 * a * c;
+        double delta = b * b - 4 * a * c;
         if (delta < 0) {
             return "Phuong trinh vo nghiem";
         }
         if (delta == 0) {
-            x1 = x2 = (-b / (2 * a));
-            return "Phuong trinh co nghiem kep: " + x1;
+            double x = (-b / (2 * a));
+            return "Phuong trinh co nghiem kep: " + x;
         }
-        x1 = (-b + Math.sqrt(delta)) / (2 * a);
-        x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        double x2 = (-b - Math.sqrt(delta)) / (2 * a);
         return "Phuong trinh co hai nghiem x1= " + x1 + " x2= " + x2;
     }
 }
