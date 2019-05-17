@@ -3,14 +3,14 @@ public class Exercise24 {
         if (number == 0) {
             return 0;
         }
-        int firstNumber = 1;
-        int sencondNumber = 1;
-        int currentNumber = 2;
+        int a0 = 1;
+        int a1 = 1;
+        int a2 = 2;
         int count = 1;
-        while ((currentNumber <= number)) {
-            currentNumber = firstNumber + sencondNumber;
-            firstNumber = sencondNumber;
-            sencondNumber = currentNumber;
+        while ((a2 <= number)) {
+            a2 = a0 + a1;
+            a0 = a1;
+            a1 = a2;
             count++;
         }
         return count;
