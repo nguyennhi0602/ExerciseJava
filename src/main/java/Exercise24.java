@@ -7,7 +7,7 @@ public class Exercise24 {
         int a1 = 1;
         int a2 = 2;
         int count = 1;
-        while ((a2 <= number)) {
+        while (a2 <= number) {
             a2 = a0 + a1;
             a0 = a1;
             a1 = a2;
