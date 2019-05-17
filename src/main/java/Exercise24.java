@@ -1,25 +1,15 @@
 public class Exercise24 {
-    public int caculateFibonaci(int number) {
+    public int countFibonaciNumber(int number) {
         if (number == 0) {
             return 0;
         }
-        if (number == 1 || number == 2) {
-            return 1;
-        }
-        int count = 2;
-        int a0 = 1, a1 = 1, result = 2;
-        while (count++ < number) {
-            result = a0 + a1;
+        int a0 = 1, a1 = 1, a3 = 2, count = 2;
+        while (a3 <= number) {
+            a3 = a0 + a1;
             a0 = a1;
-            a1 = result;
+            a1 = a3;
+            count++;
         }
-        return result;
-    }
-
-    public int countFibonaciNumber(int number) {
-        int result = 0;
-        while (caculateFibonaci(++result)<=number){
-        }
-        return result;
+        return count;
     }
 }
