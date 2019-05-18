@@ -3,15 +3,20 @@ public class Exercise25 {
         if (n == 0) {
             return 0;
         }
-        int a0 = 1;
+        int a0 = 0;
         int a1 = 1;
-        int a2 = 2;
-        int count = 1;
-        while ((a2 >= m) && (a2 <= n)) {
+        int a2 = 1;
+        int count = 0;
+        if (m == 1) {
+            count = 1;
+        }
+        while (a2 < n) {
             a2 = a0 + a1;
             a0 = a1;
             a1 = a2;
-            count++;
+            if ((a2 >= m)) {
+                count++;
+            }
         }
         return count;
     }
