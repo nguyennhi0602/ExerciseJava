@@ -31,9 +31,6 @@ public class Exercise17 {
                 result.add(i);
             }
         }
-        for (Integer i : result) {
-            System.out.print(i + ",");
-        }
         return result;
     }
 
