@@ -6,7 +6,6 @@ public class DateUtils {
 
     public static SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 
-
     public static Date convertToDate(String input, SimpleDateFormat sdf) {
         Date date = null;
         sdf.setLenient(false);
@@ -17,18 +16,18 @@ public class DateUtils {
         return date;
     }
 
-    public static int getDay(String input){
-        String []temp=input.split("/");
+    public static int getDay(String input) {
+        String[] temp = input.split("/");
         return Integer.parseInt(temp[0]);
     }
 
-    public static int getMonth(String input){
-        String []temp=input.split("/");
+    public static int getMonth(String input) {
+        String[] temp = input.split("/");
         return Integer.parseInt(temp[1]);
     }
 
-    public static int getYear(String input){
-        String []temp=input.split("/");
+    public static int getYear(String input) {
+        String[] temp = input.split("/");
         return Integer.parseInt(temp[2]);
     }
 
@@ -43,6 +42,7 @@ public class DateUtils {
         }
         return false;
     }
+
     public static boolean isYear(int year) {
         return year >= 1900 && year <= 3000;
     }

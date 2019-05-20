@@ -1,8 +1,9 @@
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import java.text.ParseException;
 import java.util.Date;
+
+import static org.junit.Assert.assertEquals;
 
 public class DateUtilsTest {
     @Test
