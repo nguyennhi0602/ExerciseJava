@@ -4,14 +4,11 @@ public class Exercise25 {
         int a1 = 1;
         int a2 = 1;
         int count = 0;
-        if (m == 1) {
-            count = 1;
-        }
-        while (a2 < n) {
+        while (a1 <= n) {
             a2 = a0 + a1;
             a0 = a1;
             a1 = a2;
-            if (a2 >= m) {
+            if (a0 >= m) {
                 count++;
             }
         }
