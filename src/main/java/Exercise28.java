@@ -1,5 +1,8 @@
 public class Exercise28 {
     public double calculateSquareOfNumber(double number) {
+        if (number == 0) {
+            return 0;
+        }
         double result = number / 2;
         double temp = 0;
         do {
