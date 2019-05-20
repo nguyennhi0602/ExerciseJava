@@ -1,6 +1,6 @@
 public class Exercise21 {
     public int numberOfDaysRemainIMonth(String input) {
-        int daysRemain = 0;
+        int remainDays = 0;
         if (DateUtils.isDate(input) == false) {
             throw new RuntimeException("Invalid date");
         } else {
@@ -8,8 +8,8 @@ public class Exercise21 {
             int month = DateUtils.getMonth(input);
             int year = DateUtils.getYear(input);
             int daysOfMonth = DateUtils.getDayInMonth(month, year);
-            daysRemain = daysOfMonth - day;
+            remainDays = daysOfMonth - day;
         }
-        return daysRemain;
+        return remainDays;
     }
 }
