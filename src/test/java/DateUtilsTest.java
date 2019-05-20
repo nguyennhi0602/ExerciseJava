@@ -7,14 +7,14 @@ import java.util.Date;
 public class DateUtilsTest {
     @Test
     public void test_convertToDate(){
-        String input="20/02/2017";
+        String input="35/02/2017";
         Date date = null;
         DateUtils.sdf.setLenient(false);
         try {
             date = DateUtils.sdf.parse(input);
         } catch (ParseException p) {
         }
-        assertEquals(new DateUtils().convertToDate("20/02/2017",DateUtils.sdf),date);
+        assertEquals(new DateUtils().convertToDate("35/02/2017",DateUtils.sdf),date);
     }
 
     @Test
@@ -27,6 +27,11 @@ public class DateUtilsTest {
     public void test_isMonth(){
         assertEquals(new DateUtils().isMonth(7),true);
         assertEquals(new DateUtils().isYear(13),false);
+    }
+
+    @Test
+    public void test_isDate(){
+        assertEquals(new DateUtils().isDate("35/12/2018"),false);
     }
 
     @Test
@@ -44,7 +49,7 @@ public class DateUtilsTest {
     @Test
     public void test_getDayInMonth(){
         assertEquals(new DateUtils().getDayInMonth(2,2000),29);
-        assertEquals(new DateUtils().getDayInMonth(3,2000),31);
+        assertEquals(new DateUtils().getDayInMonth(3,2019),31);
         assertEquals(new DateUtils().getDayInMonth(2,2001),28);
     }
 
