@@ -1,8 +1,5 @@
 public class Exercise25 {
     public int countFibonaciNumber(int m, int n) {
-        if (n == 0) {
-            return 0;
-        }
         int a0 = 0;
         int a1 = 1;
         int a2 = 1;
@@ -14,7 +11,7 @@ public class Exercise25 {
             a2 = a0 + a1;
             a0 = a1;
             a1 = a2;
-            if ((a2 >= m)) {
+            if (a2 >= m) {
                 count++;
             }
         }
