@@ -6,9 +6,10 @@ public class Exercise22Test {
     public void test_numberDaysOfYearRemaining(){
         assertEquals(new Exercise22().numberDaysOfYearRemaining("12/02/2019"),322);
     }
-    @Test(RuntimeException)
-    public void test_numberDaysOfYearRemaining(){
-        assertEquals(new Exercise22().numberDaysOfYearRemaining("12/02/2019"),0);
+
+    @Test(expected = RuntimeException.class)
+    public void testInvalidDate() {
+        assertEquals((new Exercise22()).numberDaysOfYearRemaining("2005/2019"), 0);
     }
 
 }
