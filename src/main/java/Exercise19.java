@@ -3,7 +3,7 @@ public class Exercise19 {
         int[] previousRow;
         int[] currentRow = {1};
         previousRow = currentRow;
-        for (int i = 2; i <= n; i++) {
+        for (int i = 1; i <= n+1; i++) {
             currentRow = new int[i];
             currentRow[0] = 1;
             currentRow[i - 1] = 1;
