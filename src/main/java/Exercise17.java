@@ -4,10 +4,10 @@ import java.util.List;
 public class Exercise17 {
 
     public int countNumber(int number) {
-        if (number == 0 ) {
-            return 0;
+        if (number<10 ) {
+            return 1;
         }
-        return countNumber(number / 10) +1;
+        return countNumber(number / 10)+1 ;
     }
 
     public boolean isValidNumber(int number) {
