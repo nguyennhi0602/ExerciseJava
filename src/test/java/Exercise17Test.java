@@ -8,6 +8,7 @@ public class Exercise17Test {
     @Test
     public void test_countNumber() {
         assertEquals(new Exercise17().countNumber(1532123), 7);
+        assertEquals(new Exercise17().countNumber(0), 0);
     }
 
     @Test

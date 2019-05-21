@@ -2,22 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Exercise17 {
+
     public int countNumber(int number) {
-        int count = 0;
-        while (number > 0) {
-            number /= 10;
-            count++;
+        if (number == 0) {
+            return 0;
         }
-        return count;
+        return countNumber(number / 10) +1;
     }
 
     public boolean isValidNumber(int number) {
         int countNumber = countNumber(number);
         int temp = number;
         int sum = 0;
-        int surplus = 0;
         while (temp > 0) {
-            surplus = temp % 10;
+            int surplus = temp % 10;
             temp /= 10;
             sum += Math.pow(surplus, countNumber);
         }
