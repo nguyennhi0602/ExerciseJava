@@ -4,7 +4,7 @@ import java.util.List;
 public class Exercise17 {
 
     public int countNumber(int number) {
-        if (number == 0) {
+        if (number == 0 ) {
             return 0;
         }
         return countNumber(number / 10) +1;
