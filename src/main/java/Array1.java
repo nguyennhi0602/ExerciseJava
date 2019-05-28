@@ -10,8 +10,9 @@ public class Array1 {
                 if (arr[i] == arr[j]) {
                     count++;
                 }
-                if (count > 1 && !result.contains(arr[i])) {
+                if (count == 2) {
                     result.add(arr[i]);
+                    break;
                 }
             }
         }
