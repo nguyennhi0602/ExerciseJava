@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Array5 {
     public boolean isPrimeNumber(int n) {
         if (n < 2) {
@@ -15,11 +12,11 @@ public class Array5 {
         return true;
     }
 
-    public List<Integer> getArray(int[] arr) {
-        List<Integer> result = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            if (isPrimeNumber(arr[i])) {
-                result.add(arr[i]);
+    public int getArray(int[] arr) {
+        int result = 0;
+        for (Integer ele : arr) {
+            if (isPrimeNumber(ele)) {
+                result += ele;
             }
         }
         return result;
