@@ -15,5 +15,10 @@ public class Array20Test {
                         {7, 8, 9, 10, 11},
                         {13, 14, 15, 16, 17}}, 4, 1, 1, 3),
                 new int[][]{});
+        Assert.assertArrayEquals(new Array20().getSubMatrix(
+                new int[][]{{1, 2, 3, 4, 5},
+                        {7, 8, 9, 10, 11},
+                        {13, 14, 15, 16, 17}}, 4, 1, 1, 8),
+                new int[][]{});
     }
 }
