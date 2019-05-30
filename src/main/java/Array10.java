@@ -3,10 +3,7 @@ import java.util.List;
 
 public class Array10 {
     public List<List<Integer>> minusArray(int[] arr, int n) {
-        int mid = arr.length / n;
-        if (arr.length % n != 0) {
-            mid = (arr.length / n) + 1;
-        }
+        int mid = (int) Math.ceil((double) arr.length / n);
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
