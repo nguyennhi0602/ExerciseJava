@@ -29,7 +29,7 @@ public class Array14 {
                 }
                 --bottom;
                 dir = 4;
-            } else if (dir == 4) {    
+            } else if (dir == 4) {
                 for (int i = bottom; i >= top; --i) {
                     result[index] = arr[i][left];
                     index++;
