@@ -1,23 +1,14 @@
 public class String13 {
-    public String deleteDuplicateElement(String str) {
-        String result="";
-        for (int i = 0; i < str.length(); i++) {
-            if (!result.contains(String.valueOf(str.charAt(i)))) {
-                result += String.valueOf(str.charAt(i));
+ public boolean getStringIsValid(String str1, String str2) {
+        for(int i=0;i<str1.length();i++){
+            if(str2.contains(str1.charAt(i)+"")){
+                str2=str2.replace(str1.charAt(i)+"","").trim();
             }
+            str1=str1.replace(str1.charAt(i)+"","").trim();
         }
-        return result;
-    }
-
-    public boolean getStringIsValid(String str1, String str2) {
-        str1 = deleteDuplicateElement(str1);
-        str2 = deleteDuplicateElement(str2);
-        boolean check = true;
-        for (int i = 0; i < str1.length(); i++) {
-            if (!str2.contains(String.valueOf(str1.charAt(i)))) {
-                check = false;
-            }
+        if(str1.equals(str2)){
+            return true;
         }
-        return check;
+        return false;
     }
 }
