@@ -18,15 +18,15 @@ public class String18 {
     }
 
     public String calculate(String num1, String num2) {
-        String result="";
-        for(int i=num2.length()-1;i>=0;i--){
+        String result = "";
+        for (int i = num2.length() - 1; i >= 0; i--) {
             String temp = multiply(num1, num2.charAt(i) - '0');
-            int count=num2.length()-1-i;
-            while (count!=0){
-                temp+="0";
+            int count = num2.length() - 1 - i;
+            while (count != 0) {
+                temp += "0";
                 count--;
             }
-            result=new String16().calculate(result,temp);
+            result = new String16().calculate(result, temp);
         }
         return result;
     }
