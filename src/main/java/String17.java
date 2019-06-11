@@ -3,12 +3,7 @@ public class String17 {
         if (a.length() != b.length()) {
             return a.length() > b.length();
         }
-        for (int i = 0; i < a.length(); i++) {
-            if (a.charAt(i) != b.charAt(i)) {
-                return a.charAt(i) > b.charAt(i);
-            }
-        }
-        return false;
+        return a.compareTo(b) > 0;
     }
 
     public String calculate(String a, String b, int index, int buff) {
@@ -25,7 +20,8 @@ public class String17 {
         if (indexA <= 0 && indexB <= 0) {
             return (String.valueOf(f - buff - s));
         }
-        return calculate(a, b, ++index, (f - buff - s) < 0 ? 1 : 0) + String.valueOf((f - buff - s) < 0 ? (f + 10 - buff - s) : (f - s));
+        String temp = String.valueOf((f - buff - s) < 0 ? (f + 10 - buff - s) : (f - s));
+        return calculate(a, b, ++index, (f - buff - s) < 0 ? 1 : 0) + temp;
     }
 
     public String sub(String a, String b) {

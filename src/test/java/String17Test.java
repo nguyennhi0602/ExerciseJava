@@ -4,8 +4,8 @@ import org.junit.Test;
 public class String17Test {
     @Test
     public void test_isBiger() {
-        Assert.assertEquals(new String17().isBiger("10000045", "124678"), true);
-        Assert.assertEquals(new String17().isBiger("12", "1232"), false);
+        Assert.assertTrue(new String17().isBiger("10000045", "124678"));
+        Assert.assertFalse(new String17().isBiger("12", "1232"));
     }
 
     @Test
